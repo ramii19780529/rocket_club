@@ -85,12 +85,12 @@ void setup()
   SD.remove("datalog.dat");
   datafile = SD.open("datalog.dat", FILE_WRITE);
 
-  // Start Wire1 at 10Mhz
+  // Start Wire1 at 400Mhz
   // The datasheet I2C table states support for 100kHz (standard mode)
   // and 400kHz (fast mode) but it looks like 10MHz (fast mode plus)
   // and 34Mhz (high speed mode) also work.
   Wire1.begin();
-  Wire1.setClock(34000000);
+  Wire1.setClock(400000);
 
   // Initialize the red and green LEDs.
   pinMode(LEDR, OUTPUT);
